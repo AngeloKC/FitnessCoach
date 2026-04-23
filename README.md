@@ -35,6 +35,19 @@ cd FitnessCoach
 dotnet run --project FitnessCoach.App
 ```
 
+## Infrastructure
+
+Azure resources are managed with Terraform (`infra/`). The rule is simple: provision on demand, destroy when done.
+
+```bash
+cd infra
+terraform init
+terraform apply   # spin up
+terraform destroy # tear down when finished
+```
+
+**Cost policy:** local-first development — nothing goes to Azure until a specific cloud capability needs testing. No resource should sit idle.
+
 ## Course Alignment
 
 | Phase | Course Module | Status |

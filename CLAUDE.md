@@ -102,7 +102,8 @@ The app has two AI modes:
 ### Cost Mindfulness — Standing Rule
 Azure billing is a first-class concern at every step. This applies to architecture decisions, code reviews, and any "vibe coding" sessions where we're moving fast.
 
-- **Provision on demand, tear down when done.** No cloud resource should sit idle. Scripts or IaC (Bicep/CLI) that create resources must have a paired teardown.
+- **Provision on demand, tear down when done.** No cloud resource should sit idle. Every provisioning operation must have a paired teardown path.
+- **Terraform-first for IaC.** Prefer Terraform over Bicep/CLI scripts for any Azure resource creation. `terraform apply` to spin up, `terraform destroy` to tear down — fast, repeatable, no orphaned resources. Use the `infra/` directory at the repo root for all Terraform configs.
 - **Prefer serverless and consumption-based tiers** (Azure Container Apps, Functions consumption plan, etc.) over always-on compute.
 - **Local-first development.** Run everything locally (SQLite, local model endpoints or mocks) until a cloud resource is actually required to test a specific Azure capability.
 - **Before provisioning anything in Azure, ask:** does this need to be in the cloud right now, or can we fake it locally?
