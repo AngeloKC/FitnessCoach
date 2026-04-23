@@ -20,10 +20,11 @@ An AI-powered fitness coaching web app built as a hands-on learning vehicle for 
 ## Solution Structure
 
 ```
-FitnessCoach.App        # Blazor Server — UI only
-FitnessCoach.Services   # Business logic, AI orchestration, agent coordination
-FitnessCoach.DAL        # EF Core DbContext and repositories
-FitnessCoach.Data       # Shared models, DTOs, interfaces
+FitnessCoach.sln
+FitnessCoach.App\       # Blazor Server — UI only
+FitnessCoach.Services\  # Business logic, AI orchestration, agent coordination
+FitnessCoach.DAL\       # EF Core DbContext and repositories
+FitnessCoach.Data\      # Shared models, DTOs, interfaces
 ```
 
 ## Getting Started

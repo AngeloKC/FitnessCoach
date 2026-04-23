@@ -116,10 +116,11 @@ Azure billing is a first-class concern at every step. This applies to architectu
 The solution is layered. Each layer has one job. Blazor is a thin shell.
 
 ```
-FitnessCoach.App          # Blazor Server — UI only
-FitnessCoach.Services     # Business logic, AI orchestration, agent coordination
-FitnessCoach.DAL          # EF Core DbContext, repositories, SQLite
-FitnessCoach.Data         # Shared models, DTOs, interfaces — no dependencies
+FitnessCoach.sln
+FitnessCoach.App\          # Blazor Server — UI only
+FitnessCoach.Services\     # Business logic, AI orchestration, agent coordination
+FitnessCoach.DAL\          # EF Core DbContext, repositories, SQLite
+FitnessCoach.Data\         # Shared models, DTOs, interfaces — no dependencies
 ```
 
 **Rules:**
