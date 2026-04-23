@@ -32,14 +32,27 @@ FitnessCoach.Data\      # Shared models, DTOs, interfaces
 ```bash
 git clone https://github.com/AngeloKC/FitnessCoach.git
 cd FitnessCoach
-dotnet run --project src/FitnessCoach.App
+dotnet run --project FitnessCoach.App
 ```
 
 ## Course Alignment
 
 | Phase | Course Module | Status |
 |---|---|---|
-| 1 | Develop generative AI apps in Azure | In progress |
-| 2 | Develop AI agents on Azure | Planned |
-| 3 | Natural language solutions | Planned |
-| 4 | Extract insights from visual data | Planned |
+| 1 | [Develop generative AI apps in Azure](https://learn.microsoft.com/en-us/training/paths/develop-generative-ai-apps/) | In progress |
+| 2 | [Develop AI agents on Azure](https://learn.microsoft.com/en-us/training/paths/develop-ai-agents-azure/) | Planned |
+| 3 | [Develop natural language solutions in Azure](https://learn.microsoft.com/en-us/training/paths/develop-language-solutions-azure-ai/) | Planned |
+| 4 | [Develop computer vision solutions with Microsoft Foundry](https://learn.microsoft.com/en-us/training/paths/develop-computer-vision-with-foundry/) | Planned |
+
+## Real-World Scenarios
+
+Alongside the course deliverables, this project explores three enterprise scenarios that surface in production AI work:
+
+**Prompt management for non-technical stakeholders**
+How can subject-matter experts (e.g., certified trainers) contribute to and govern the coaching persona and system prompts without requiring code access or a deployment cycle? This covers prompt versioning, external prompt storage, and approval workflows.
+
+**LLM prompt quality evaluation**
+How do we validate that a model or prompt change actually improves coaching response quality before it reaches production? This covers Azure AI Foundry's evaluation tooling, defining fitness-specific quality metrics, and regression testing across model versions.
+
+**Migration path: Azure OpenAI Service → Microsoft Foundry**
+Many existing workloads are built on the standalone Azure OpenAI Service. Foundry expands model choice and unlocks agentic capabilities. This tracks the migration delta — API surface, SDK changes, and capabilities that are Foundry-only.
